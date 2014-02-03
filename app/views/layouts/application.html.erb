@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Devtestapiapp</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <meta charset="utf-8" />
+  <title>IQMI | Developer Testing</title>
+  <link rel="apple-touch-icon-precomposed" href="<%= asset_path 'apple-touch-icon-144x144-precomposed.png' %>">
+  <link rel="apple-touch-icon" href="<%= asset_path 'apple-touch-icon-144x144-precomposed.png' %>">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="<%= asset_path 'apple-touch-icon-144x144-precomposed.png' %>">
+  <link rel="shortcut icon" href="<%= asset_path 'favicon.ico' %>">
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
