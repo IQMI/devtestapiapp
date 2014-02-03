@@ -2,7 +2,12 @@ class ApiV1Controller < ApplicationController
 
   ########################################################## INDEX
   def index
-    render json: generate_sample_response
+    sample_response = generate_sample_response
+
+    respond_to do |format|
+      format.json { render json: sample_response }
+      format.xml { render xml: JSON.parse(sample_response).to_xml(root: :tweets) }
+    end
   end
 
 
